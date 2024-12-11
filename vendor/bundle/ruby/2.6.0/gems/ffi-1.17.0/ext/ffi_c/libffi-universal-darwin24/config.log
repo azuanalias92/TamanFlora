@@ -30,26 +30,19 @@ Kernel configured for up to 8 processors.
 Processor type: arm64e (ARM64E)
 Processors active: 0 1 2 3 4 5 6 7
 Primary memory available: 8.00 gigabytes
-Default processor set: 439 tasks, 2884 threads, 8 processors
-Load average: 21.10, Mach factor: 0.95
+Default processor set: 514 tasks, 3576 threads, 8 processors
+Load average: 20.60, Mach factor: 0.40
 /bin/machine           = unknown
 /usr/bin/oslevel       = unknown
 /bin/universe          = unknown
 
-PATH: /Users/azuanalias/.npm/_npx/2788f5fbd47acb89/node_modules/.bin/
-PATH: /Users/azuanalias/Desktop/Personal/node_modules/.bin/
-PATH: /Users/azuanalias/Desktop/node_modules/.bin/
-PATH: /Users/azuanalias/node_modules/.bin/
-PATH: /Users/node_modules/.bin/
-PATH: /node_modules/.bin/
-PATH: /Users/azuanalias/.nvm/versions/node/v20.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/
-PATH: /Users/azuanalias/.npm/_npx/7930a8670f922cdb/node_modules/.bin/
-PATH: /Users/azuanalias/Desktop/Personal/node_modules/.bin/
-PATH: /Users/azuanalias/Desktop/node_modules/.bin/
-PATH: /Users/azuanalias/node_modules/.bin/
-PATH: /Users/node_modules/.bin/
-PATH: /node_modules/.bin/
-PATH: /Users/azuanalias/.nvm/versions/node/v20.11.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/
+PATH: /var/folders/v9/glnlnr310jg7pj77ym0f35dw0000gn/T/yarn--1733900605650-0.4280973522077909/
+PATH: /Users/azuanalias/Desktop/Personal/TamanFlora/node_modules/.bin/
+PATH: /Users/azuanalias/.config/yarn/link/node_modules/.bin/
+PATH: /Users/azuanalias/.yarn/bin/
+PATH: /Users/azuanalias/.nvm/versions/node/v20.11.1/libexec/lib/node_modules/npm/bin/node-gyp-bin/
+PATH: /Users/azuanalias/.nvm/versions/node/v20.11.1/lib/node_modules/npm/bin/node-gyp-bin/
+PATH: /Users/azuanalias/.nvm/versions/node/v20.11.1/bin/node_modules/npm/bin/node-gyp-bin/
 PATH: /Users/azuanalias/.nvm/versions/node/v20.11.1/bin/
 PATH: /opt/homebrew/bin/
 PATH: /opt/homebrew/sbin/
@@ -67,6 +60,12 @@ PATH: /Applications/VMware Fusion.app/Contents/Public/
 PATH: /usr/local/share/dotnet/
 PATH: ~/.dotnet/tools/
 PATH: /Library/Frameworks/Mono.framework/Versions/Current/Commands/
+PATH: /Users/azuanalias/.nvm/versions/node/v20.11.1/bin/
+PATH: /opt/homebrew/bin/
+PATH: /opt/homebrew/sbin/
+PATH: /Users/azuanalias/Library/Android/sdk/emulator/
+PATH: /Users/azuanalias/Library/Android/sdk/platform-tools/
+PATH: /Users/azuanalias/Desktop/cps/flutter/bin/
 PATH: /Users/azuanalias/Library/Android/sdk/emulator/
 PATH: /Users/azuanalias/Library/Android/sdk/platform-tools/
 PATH: /Users/azuanalias/Desktop/cps/flutter/bin/
@@ -1115,7 +1114,7 @@ configure:18644: checking for memfd_create
 configure:18644: xcrun clang -o conftest -Wall  -fexceptions   conftest.c  >&5
 Undefined symbols for architecture arm64:
   "_memfd_create", referenced from:
-      _main in conftest-7c1b1a.o
+      _main in conftest-28613f.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:18644: $? = 1

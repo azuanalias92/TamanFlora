@@ -13,11 +13,12 @@ import {
   NewsDetailScreen,
   NewsListScreen,
   SettingScreen,
+  HomeScreen,
 } from '@src/screens';
 import { isForceUpdate } from '@src/store';
-
 import { NavStackParams, Screen } from './appNavigation.type';
 import { ForUpdateStack } from './ForceupdateStack';
+import { AppTabs } from './BottomNavigation';
 
 export const navigationRef =
   React.createRef<NavigationContainerRef<NavStackParams>>();
@@ -38,6 +39,8 @@ export const AppNavigation = () => {
         <ForUpdateStack />
       ) : (
         <Stack.Navigator screenOptions={screenOptions}>
+          <Stack.Screen name={Screen.BOTTOM_TAB} component={AppTabs} />
+          <Stack.Screen name={Screen.HOME} component={HomeScreen} />
           <Stack.Screen name={Screen.NEWS_LIST} component={NewsListScreen} />
           <Stack.Screen
             name={Screen.NEWS_DETAIL}
@@ -45,6 +48,7 @@ export const AppNavigation = () => {
           />
           <Stack.Screen name={Screen.SETTING} component={SettingScreen} />
           <Stack.Screen name={Screen.LOGIN} component={LoginScreen} />
+
           {__DEV__ && (
             <Stack.Screen
               name={Screen.NETWORK_CHECK}

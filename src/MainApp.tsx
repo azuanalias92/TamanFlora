@@ -7,6 +7,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 
 import { LocalizationProvider, ThemeProvider } from './context';
 import { AppNavigation, navigationRef } from './navigation/AppNavigation';
+
 import store, { persistor } from './store';
 import { loader } from './utils';
 

@@ -1,6 +1,5 @@
 import type { RouteProp } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
-
 import { NewsResult } from '@src/services';
 
 export enum Screen {
@@ -11,9 +10,12 @@ export enum Screen {
   SETTING = 'SETTING',
   LOGIN = 'LOGIN',
   SIGNUP = 'SIGNUP',
+  HOME = 'HOME',
+  BOTTOM_TAB = 'BOTTOM_TAB',
 }
 
 export type NavStackParams = {
+  [Screen.BOTTOM_TAB]: undefined;
   [Screen.FORCE_UPDATE_SCREEN]: undefined;
   [Screen.NETWORK_CHECK]: undefined;
   [Screen.NEWS_DETAIL]: NewsDetailParams;
@@ -21,6 +23,7 @@ export type NavStackParams = {
   [Screen.SETTING]: undefined;
   [Screen.LOGIN]: undefined;
   [Screen.SIGNUP]: undefined;
+  [Screen.HOME]: undefined;
 };
 
 export type NewsDetailParams = {
