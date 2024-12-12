@@ -26,9 +26,11 @@ const screenOptions =
       let iconSource: any;
 
       if (route.name === 'Home') {
-        iconSource = Icons.HOME_ICONS;
+        iconSource = focused ? Icons.HOME_ICONS : Icons.HOME_OUTLINE_ICONS;
       } else if (route.name === 'Settings') {
-        iconSource = Icons.SETTINGS_ICONS;
+        iconSource = focused
+          ? Icons.SETTINGS_ICONS
+          : Icons.SETTINGS_OUTLINE_ICONS;
       } else {
         iconSource = Icons.DEBUG_ICONS; // Fallback or for custom routes
       }

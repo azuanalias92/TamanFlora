@@ -14,11 +14,12 @@ import {
 
 import { reduxStorage } from '@src/context';
 
-import { newsData, newsDataName, userData } from './reducers';
+import { newsData, newsDataName, userData, housesData } from './reducers';
 
 const rootReducer = combineReducers({
   newsData,
   userData,
+  housesData,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

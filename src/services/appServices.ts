@@ -1,14 +1,16 @@
 import { API_METHODS } from './appServices.type';
 import { ServicesEndPoints } from './appServicesEndPoints';
+import { getHousesCommercialResponseAdapter } from './commercial/adapters/response/getHousesCommercialResponseAdapter copy';
 import { getNewsCommercialResponseAdapter } from './commercial/adapters/response/getNewsCommercialResponseAdapter';
 import { GetUserCommercialResponseAdapter } from './commercial/adapters/response/getUserCommercialResponseAdapter';
 import { PostLoginCommercialResponseAdapter } from './commercial/adapters/response/postLoginCommercialResponseAdapter';
+import { NewDataResponse } from './commercial/dtos/HousesResponseDTO';
 import { NewsResponseDTO } from './commercial/dtos/NewsResponseDTO';
 import {
   LoginResponseDTO,
   UserResponseDTO,
 } from './commercial/dtos/UserResponseDTO';
-import { ListUserReq, NewsResult, UserResult } from './models';
+import { HousesResult, ListUserReq, NewsResult, UserResult } from './models';
 import { LoginParams, LoginResult } from './models/login';
 import serviceAdapter from './serviceAdapter';
 
@@ -54,6 +56,21 @@ export class AppServices {
       )
         .then(res => {
           resolve(new getNewsCommercialResponseAdapter().service(res));
+        })
+        .catch(error => {
+          reject(error);
+        });
+    });
+  };
+
+  getHouses = async (): Promise<HousesResult[]> => {
+    return new Promise((resolve, reject) => {
+      serviceAdapter<NewDataResponse[], undefined>(
+        API_METHODS.GET,
+        ServicesEndPoints.HOUSES
+      )
+        .then(res => {
+          resolve(new getHousesCommercialResponseAdapter().service(res));
         })
         .catch(error => {
           reject(error);

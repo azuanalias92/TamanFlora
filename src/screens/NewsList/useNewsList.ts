@@ -19,7 +19,7 @@ const useNewsList = () => {
   const getNewsData = useCallback(async () => {
     loader.current?.show();
     try {
-      const getNews = await services.getNews();
+      const getNews: NewsResult[] = []; //await services.getNews();
       dispatch(setNews(getNews));
     } catch (error) {
       logger('Error getNews>>', error);
